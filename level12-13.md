@@ -6,7 +6,7 @@ We need to decompress the contents of the file to obtain the password.
 ### Steps
 1. Create a temporary working directory using `mkdir /tmp/bandit_lv12` and navigate to it.
 2. Copy the file to the directory using `cp ~/data.txt .`
-3. Revert the hexdump of the file to binary using `xxd -r data.txt > data.bin`
+3. Revert the hexdump of the file to binary using `xxd -r data.txt > data.bin`  
    The `xxd` command is used to create and analyze hexadecimal dumps of files.
 4. Use the `file` command to check the file type, which would be useful for further decompression.
    ```bash
@@ -21,10 +21,10 @@ We need to decompress the contents of the file to obtain the password.
    gunzip data.gz  # decompress file -> produces a file named 'data'
    ```
 6. Run the file command for every decompressed file (output file) until a plaintext ASCII file is obtained.
-   For gunzip (`.gz`): `gunzip filename`
-   For bunzip (`.bz2`): `bunzip2 filename`
-   For POSIX tar archive: `tar -xf filename`
-   Note: The extension of the file needs to be changed only for gunzip files. Not required for other filetypes.
+   For gunzip (`.gz`): `gunzip filename`  
+   For bunzip (`.bz2`): `bunzip2 filename`  
+   For POSIX tar archive: `tar -xf filename`  
+   Note: The extension of the file needs to be changed only for gunzip files. Not required for other filetypes.  
 
 ### Commands executed
 ```bash
