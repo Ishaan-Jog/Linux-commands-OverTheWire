@@ -20,7 +20,7 @@ We need to decompress the contents of the file to obtain the password.
    mv data.bin data.gz  # rename extension
    gunzip data.gz  # decompress file -> produces a file named 'data'
    ```
-6. Run the file command for every decompressed file (output file) until a plaintext ASCII file is obtained.
+6. Run the file command for every decompressed file (output file) until a plaintext ASCII file is obtained.  
    For gunzip (`.gz`): `gunzip filename`  
    For bunzip (`.bz2`): `bunzip2 filename`  
    For POSIX tar archive: `tar -xf filename`  
